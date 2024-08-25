@@ -8,47 +8,64 @@
     
 </head>
 <body>
-    <body>
-        <div class="container mt-5">
-            <h1 class="mb-4">Pet Owner Information</h1>
-            <form id="petOwnerForm">
-                <div class="form-group">
-                    <label for="ownerName">Owner's Name</label>
-                    <input type="text" class="form-control" id="ownerName" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
-                </div>
-                <div class="form-group">
-                    <label for="zip">Zip Code</label>
-                    <input type="text" class="form-control" id="zip" placeholder="Enter your zip code" required>
-                </div>
-                <div class="form-group">
-                    <label for="petName">Pet's Name</label>
-                    <input type="text" class="form-control" id="petName" placeholder="Enter your pet's name" required>
-                </div>
-                <div class="form-group">
-                    <label for="petType">Pet Type</label>
-                    <select class="form-control" id="petType">
-                        <option>Dog</option>
-                        <option>Cat</option>
-                        <option>Fish</option>
-                        <option>Bird</option>
-                    </select>
-                </div>
-                <br>
-                <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
-            </form>
+    <div class="container mt-5">
+        <h1 class="mb-4">Pet Owner Information</h1>
 
-      <script src="script.js"></script>
+        <!-- Error Message -->
+        <div id="errorMessage" class="text-danger mb-3"></div>
+        
+        <!-- Pet Owner Form -->
+        <form id="petOwnerForm">
+            <div class="form-group">
+                <label for="ownerName">Owner's Name</label>
+                <input type="text" class="form-control" id="ownerName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="ownerEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="ownerPhone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="ownerCity" placeholder="Enter your city" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">Zip Code</label>
+                <input type="text" class="form-control" id="ownerZip" placeholder="Enter your zip code" required>
+            </div>
+            <div class="form-group">
+                <label for="petName">Pet's Name</label>
+                <input type="text" class="form-control" id="petName" placeholder="Enter your pet's name" required>
+            </div>
+            <div class="form-group">
+                <label for="petType">Pet Type</label>
+                <select class="form-control" id="petType">
+                    <option>Dog</option>
+                    <option>Cat</option>
+                    <option>Fish</option>
+                    <option>Bird</option>
+                </select>
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+        </form>
+
+        <!-- Pet Owner Details Card (Initially Hidden) -->
+        <div id="petOwnerCard" class="card mt-5" style="display:none;">
+            <div class="card-body">
+                <h5 class="card-title">Pet Owner Details</h5>
+                <p class="card-text"><strong>Owner's Name:</strong> <span id="ownerNameDisplay"></span></p>
+                <p class="card-text"><strong>City:</strong> <span id="ownerCityDisplay"></span></p>
+                <p class="card-text"><strong>Pet's Name:</strong> <span id="petNameDisplay"></span></p>
+                <p class="card-text"><strong>Pet Type:</strong> <span id="petTypeDisplay"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="petOwnerFactory.js"></script>
 </body>
 </html>
