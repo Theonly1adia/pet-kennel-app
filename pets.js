@@ -4,10 +4,10 @@ const state= {
     pets: []
 };
 
-document.getElementById('createPetButton').addEventListener('clcik', function(){
-    const name = document.getElementById('petName').value;
-    const age = parseInt(document.getElementById('petage').value, 10);
-    const species = document.getElementById('petSpecies').value;
+document.getElementById('createPetButton').addEventListener('click', function(){
+    const name =document.getElementById('petName').value;
+    const age =parseInt(document.getElementById('petAge').value, 10);
+    const species =document.getElementById('petSpecies').value;
 
     const newPet = createPet(name, age, species);
 
@@ -18,6 +18,8 @@ document.getElementById('createPetButton').addEventListener('clcik', function(){
 })
 
 //Create a pet names "Hello"
-const helloPet = createPet("Hello", 2, "Dog")
+const helloPet = createPet("Hello", 2, "Dog");
+console.log(helloPet.html()); //Proof of Life for Html method
 
 helloPet.status();
+
