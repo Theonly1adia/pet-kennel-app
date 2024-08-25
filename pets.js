@@ -23,3 +23,15 @@ console.log(helloPet.html()); //Proof of Life for Html method
 
 helloPet.status();
 
+function renderPets(){
+    let petsHtml = '';
+    state.pets.forEach(pet => {
+        const petHtml = pet.html();
+        console.log(petHtml);
+        petsHtml += petHtml;
+    });
+
+    console.log(petsHtml);
+    document.getElementById("petsContainer").innerHTML = petsHtml
+}
+
