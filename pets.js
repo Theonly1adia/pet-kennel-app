@@ -1,20 +1,27 @@
 console.log("Hello from pets.js");
 
-const state= {
-    pets: []
-};
+
 
 document.getElementById('createPetButton').addEventListener('click', function(){
-    const name =document.getElementById('petName').value;
-    const age =parseInt(document.getElementById('petAge').value, 10);
-    const species =document.getElementById('petSpecies').value;
+    const name =document.getElementById('petName');
+    const age =parseInt(document.getElementById('petAge'));
+    const species =document.getElementById('petSpecies');
+
+    state.name = name;
+    state.email = document.getElementById('ownerEmail').value;
+    state.zipcode = document.getElementById('ownerZipcode').value;
+
+    localStorage.setItem("name", state.name);
+    localStorage.setItem("email", state.email);
+    localStorage.setItem("zipcode", state.zipcode);
 
     const newPet = createPet(name, age, species);
-
     state.pets.push(newPet);
 
     newPet.status();
     console.table(state.pets);
+    
+    renderPets();
 })
 
 //Create a pet names "Hello"
@@ -31,7 +38,7 @@ function renderPets(){
         petsHtml += petHtml;
     });
 
-    console.log(petsHtml);
     document.getElementById("petsContainer").innerHTML = petsHtml
+    console.log(petsHtml);
 }
 

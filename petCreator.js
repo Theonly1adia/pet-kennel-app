@@ -27,7 +27,7 @@ function createPet(name, age, species, happiness = 50, energy = 100) {
 
     html: function(){
         return `
-            div class="pet-card">
+            div class="col-3">
                 <h3>${this.name}</h3>
                 <p>Species: ${this.species}</p>
                 <p>Age: ${this.age}</p>
