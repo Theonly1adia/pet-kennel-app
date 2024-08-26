@@ -1,15 +1,6 @@
-console.log("Hello World");
+console.log("Hey hey hey");
 
-//This is a state
-let state = {
-    ownerName:"",
-    email: "",
-    phone:"",
-    city:"",
-    zip:"",
-    petName:"",
-    petType:"",
-}
+
 console.log(state);
 
 let subBtn = document.getElementById("submitButton");
@@ -66,26 +57,53 @@ function saveForm(){
     console.log("Button clicked!");//Proof of Life
 
     //Capture form data and update the state object
+    // this is the simplified version
+
     state.ownerName = document.getElementById('ownerName').value;
-    console.log("Owner's Name:", state.ownerName); 
-
     state.email = document.getElementById('ownerEmail').value;
-    console.log("Email:", state.email);
-
     state.phone = document.getElementById('ownerPhone').value;
-    console.log("Phone:", state.phone);
-
     state.city = document.getElementById('ownerCity').value;
-    console.log("City:", state.city);
-
     state.zip = document.getElementById('ownerZip').value;
-    console.log("Zip Code:", state.zip);
-
     state.petName = document.getElementById('petName').value;
-    console.log("Pet's Name:", state.petName);
-
     state.petType = document.getElementById('petType').value;
+
+
+    console.log("Owner's Name:", state.ownerName);
+    console.log("Email:", state.email);
+    console.log("Phone:", state.phone);
+    console.log("City:", state.city);
+    console.log("Zip Code:", state.zip);
+    console.log("Pet's Name:", state.petName);
     console.log("Pet Type:", state.petType);
+
+
+    /* let name = document.getElementById('ownerName').value;
+    state.ownerName = name
+    console.log(ownerName); 
+
+    let email = document.getElementById('ownerEmail').value;
+    state.email = email
+    console.log(ownerEmail);
+
+    let phone = document.getElementById('ownerPhone').value;
+    state.phone = phone
+    console.log(ownerPhone);
+
+    let city = document.getElementById('ownerCity').value;
+    state.city = city
+    console.log(ownerCity);
+
+    let zip = document.getElementById('ownerZip').value;
+    state.zip = zip
+    console.log(ownerZip);
+
+    let petName = document.getElementById('petName').value;
+    state.petName = petName
+    console.log(petName);
+
+    let petType = document.getElementById('petType').value;
+    state.petTpe = petType
+    console.log(petType); */
 
 
 
@@ -103,7 +121,7 @@ function saveForm(){
         state.city,
         state.zip,
         state.petName,
-        state.petType,
+        state.petType
         
     );
    
@@ -136,8 +154,8 @@ function createPetOwner(ownerName, email, phone, city, zip, petName, petType) {
             console.log(`Owner: ${this.ownerName}, Email: ${this.email}, Phone: ${this.phone}, City: ${this.city}, Zip: ${this.zip}, Pet: ${this.petName} (${this.petType})`);
         },
         render() {
-            document.getElementById("ownerNameDisply").textContent = this.ownerName;
-            document.getElementById("ownerCityDsplay").textContent = this.city;
+            document.getElementById("ownerNameDisplay").textContent = this.ownerName;
+            document.getElementById("ownerCityDisplay").textContent = this.city;
             document.getElementById("petNameDisplay").textContent = this.petName;
             document.getElementById("petTypeDisplay").textContent = this.petType;
 
