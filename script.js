@@ -111,7 +111,13 @@ function saveForm(){
     if (validateForm()){
     console.table(state);
 
-
+    localStorage.setItem("name", state.ownerName)
+    localStorage.setItem("email", state.email)
+    localStorage.setItem("phone", state.phone)
+    localStorage.setItem("city", state.city)
+    localStorage.setItem("zip", state.zip)
+    localStorage.setItem("petName", state.petName)
+    localStorage.setItem("petType", state.petType)
 
 
     const newPetOwner = createPetOwner(
